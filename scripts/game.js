@@ -40,6 +40,13 @@ function addTurn() {
     // showTurns();
 }
 
+function lightsOn(circ) {
+    document.getElementById(circ).classList.add(circ + "light");
+    setTimeout(function () {
+        document.getElementById(circ).classList.remove(circ + "light");
+    }, 400);
+}
+
 function showScore() {
     document.getElementById("score").innerText = game.score;
 }
